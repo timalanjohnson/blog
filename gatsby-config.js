@@ -6,7 +6,7 @@ module.exports = {
       summary: `I am a software engineer, photographer, amateur cook, and writer from Cape Town`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://timalanjohnson.com/`,
+    siteUrl: `https://eager-gates-e63343.netlify.app/`,
     social: {
       twitter: `timalanjohnson`,
     },
