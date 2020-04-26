@@ -1,52 +1,50 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
+
+import "./layout.css"
 
 const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
   let header
+  let nav
 
-  if (location.pathname === rootPath) {
-    header = (
-      <h1
+  header = (
+    <h3
+      style={{
+        fontFamily: `Montserrat, sans-serif`,
+        marginTop: 0,
+      }}
+    >
+      <Link
         style={{
-          ...scale(1.5),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
+          boxShadow: `none`,
+          color: `inherit`,
+        }}
+        to={`/`}
+      >
+        {title}
+      </Link>
+    </h3>
+  )
+
+  nav = (
+    <nav>
+      <ul
+        style={{
+          display: `grid`,
+          gridGap: `16px`,
+          gridTemplateColumns: `auto`,
+          justifyContent: `flex-end`,
+          listStyle: `none`,
+          padding: 0,
         }}
       >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <h3
-        style={{
-          fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h3>
-    )
-  }
+        <li><Link to={`/contact`}>{`Contact`}</Link></li>
+      </ul>
+    </nav>
+  )
+
   return (
     <div
       style={{
@@ -56,9 +54,9 @@ const Layout = ({ location, title, children }) => {
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
-      <header>{header}</header>
+      <header style={{display: `grid`, gridTemplateColumns: `1fr 1fr`}}>{header}{nav}</header>
       <main>{children}</main>
-      <footer>
+      <footer style={{textAlign: `center`}}>
         © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
