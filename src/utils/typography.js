@@ -5,7 +5,7 @@ sutro.baseFontSize = '16px' // was 22px
 
 sutro.overrideThemeStyles = ({ rhythm }, options) => ({
   'a': {
-    color: '#409CFF'
+    color: 'royalblue'
   },
   'blockquote': {
     marginLeft: '-32px'
