@@ -1,3 +1,20 @@
+* {
+    background: rgb(255, 255, 255);;
+    color: rgb(20, 20, 20);
+}
+
 ul, ol {
     padding-left: 40px;
+}
+
+article > section > p > img {
+    max-width: 100%;
+    margin-left: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    article > section > p > img {
+        max-width: 768px;
+        margin-left: -64px;
+    }
 }

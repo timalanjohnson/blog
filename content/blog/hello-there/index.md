@@ -1,7 +1,7 @@
 ---
 title: Hello There
 date: "2020-04-26"
-description: "Hello There"
+description: "Yes, I am starting a blog. I don’t know what I will write about or how often I will write about it, but at least now I’ve started."
 ---
 
 > "General Kenobi. You are a bold one."
