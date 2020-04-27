@@ -5,7 +5,6 @@ module.exports = {
       name: `Timothy Johnson`,
       summary: `I am a South African software engineer, photographer, sports fanatic, and now writer from Cape Town`,
     },
-    themeColor: '#141414',
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://timalanjohnson.com`,
     social: {
