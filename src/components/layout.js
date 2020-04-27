@@ -56,10 +56,12 @@ const Layout = ({ location, title, children }) => {
     >
       <header style={{display: `grid`, gridTemplateColumns: `1fr 1fr`}}>{header}{nav}</header>
       <main>{children}</main>
-      <footer style={{textAlign: `center`}}>
+      <footer style={{textAlign: `center`, color: `rgba(20, 20, 20, 0.5)`}}>
         © {new Date().getFullYear()}, Built with
         {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.gatsbyjs.org">Gatsby</a>. View source on
+        {` `}
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/timalanjohnson/blog">GitHub</a>.
       </footer>
     </div>
   )
