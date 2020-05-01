@@ -13,7 +13,7 @@ const Layout = ({ location, title, children }) => {
     <h3
       style={{
         fontFamily: `Montserrat, sans-serif`,
-        marginTop: 0,
+        marginTop: `3px`,
       }}
     >
       <Link
@@ -34,12 +34,13 @@ const Layout = ({ location, title, children }) => {
         style={{
           display: `grid`,
           gridGap: `16px`,
-          gridTemplateColumns: `auto`,
+          gridTemplateColumns: `auto auto`,
           justifyContent: `flex-end`,
           listStyle: `none`,
           padding: 0,
         }}
       >
+        <li><Link to={`/blog`}>{`Blog`}</Link></li>
         <li><Link to={`/contact`}>{`Contact`}</Link></li>
       </ul>
     </nav>
@@ -59,9 +60,9 @@ const Layout = ({ location, title, children }) => {
       <footer style={{textAlign: `center`, color: `rgba(20, 20, 20, 0.5)`}}>
         © {new Date().getFullYear()}, Built with
         {` `}
-        <a target="_blank" rel="noopener noreferrer" href="https://www.gatsbyjs.org">Gatsby</a>. View source on
+        <a target="_blank" rel="nofollow noopener noreferrer" href="https://www.gatsbyjs.org">Gatsby</a>. View source on
         {` `}
-        <a target="_blank" rel="noopener noreferrer" href="https://github.com/timalanjohnson/blog">GitHub</a>.
+        <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/timalanjohnson/blog">GitHub</a>.
       </footer>
     </div>
   )

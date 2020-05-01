@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
+import Projects from "../components/projects"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
@@ -12,9 +13,11 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Blog" />
+      <SEO title="Home" />
       <Bio />
-      <h1>All Posts</h1>
+      <h2 style={{marginBottom: 0}}>Projects</h2>
+      <Projects />
+      <h2>Blog</h2>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
